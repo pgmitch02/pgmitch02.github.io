@@ -169,22 +169,35 @@ a {
 }
 
 .hero-island-logo {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   border-radius: 999px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 0 0 auto;
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: var(--text);
+  padding: 0.45rem;
   background: linear-gradient(
     135deg,
-    color-mix(in srgb, var(--accent-1) 34%, transparent),
-    color-mix(in srgb, var(--accent-2) 34%, transparent)
+    color-mix(in srgb, var(--accent-1) 12%, transparent),
+    color-mix(in srgb, var(--accent-2) 12%, transparent)
   );
   border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-mark svg {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .hero-island-nav {
@@ -595,8 +608,8 @@ a {
   }
 
   .hero-island-logo {
-    width: 44px;
-    height: 44px;
+    width: 56px;
+    height: 56px;
   }
 
   .hero-island-link {
