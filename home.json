@@ -7,7 +7,7 @@
     "name": "Peter Mitchell",
     "role": "Infrastructure Network Analyst",
     "domain": "peter-mitchell.pgmitch.cc",
-    "logoText": "PM"
+    "logoPath": "logo.svg"
   },
   "hero": {
     "eyebrow": "Infrastructure • Networking • Systems",
