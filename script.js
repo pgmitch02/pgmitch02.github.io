@@ -120,14 +120,14 @@ function updateSectionVisibility() {
     const rect = section.getBoundingClientRect();
     const sectionCenter = rect.top + rect.height / 2;
     const distance = Math.abs(viewportCenter - sectionCenter);
-    const maxDistance = window.innerHeight * 0.7;
-    const ratio = Math.max(0, 1 - distance / maxDistance);
-    const opacity = 0.24 + ratio * 0.76;
-    const translate = (1 - ratio) * 18;
-    const scale = 0.986 + ratio * 0.014;
+    const maxDistance = window.innerHeight * 0.52;
+    const rawRatio = Math.max(0, 1 - distance / maxDistance);
+    const ratio = Math.pow(rawRatio, 1.25);
+    const opacity = 0.58 + ratio * 0.42;
+    const translate = (1 - ratio) * 14;
 
     section.style.opacity = opacity.toFixed(3);
-    section.style.transform = `translateY(${translate.toFixed(2)}px) scale(${scale.toFixed(3)})`;
+    section.style.transform = `translateY(${translate.toFixed(2)}px)`;
   });
 }
 
