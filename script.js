@@ -147,7 +147,9 @@ async function loadContent() {
   const content = await response.json();
 
   document.title = content.meta.title;
-  document.querySelector('meta[name="description"]').setAttribute("content", content.meta.description);
+  document
+    .querySelector('meta[name="description"]')
+    .setAttribute("content", content.meta.description);
 
   document.getElementById("brandName").textContent = content.site.name;
   document.getElementById("brandRole").textContent = content.site.role;
@@ -156,6 +158,10 @@ async function loadContent() {
   document.getElementById("heroEyebrow").textContent = content.hero.eyebrow;
   document.getElementById("heroTitle").textContent = content.hero.title;
   document.getElementById("heroIntro").textContent = content.hero.intro;
+
+  if (heroIslandLogo && content.site.logoPath) {
+    heroIslandLogo.src = content.site.logoPath;
+  }
 
   content.hero.cards.forEach((card) => {
     if (heroIslandNav) {
@@ -179,4 +185,3 @@ loadContent()
   .catch((error) => {
     console.error("Failed to load homepage content:", error);
   });
-``
