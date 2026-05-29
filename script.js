@@ -4,6 +4,8 @@ const themeText = document.getElementById("themeText");
 const themeIcon = document.getElementById("themeIcon");
 const pathGrid = document.getElementById("pathGrid");
 const scrollSections = document.getElementById("scrollSections");
+const heroIslandNav = document.getElementById("heroIslandNav");
+const heroIslandLogo = document.getElementById("heroIslandLogo");
 
 const savedTheme = localStorage.getItem("theme");
 const initialTheme = savedTheme === "light" || savedTheme === "dark" ? savedTheme : "dark";
@@ -27,6 +29,15 @@ toggle.addEventListener("click", () => {
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+function createIslandLink(card) {
+  const link = document.createElement("a");
+  link.className = "hero-island-link";
+  link.href = card.href;
+  link.textContent = card.title;
+  link.setAttribute("aria-label", card.title);
+  return link;
+}
 
 function createPathCard(card) {
   const link = document.createElement("a");
@@ -121,6 +132,7 @@ function updateSectionVisibility() {
 }
 
 let scheduled = false;
+
 function requestVisibilityUpdate() {
   if (scheduled) return;
   scheduled = true;
@@ -142,19 +154,33 @@ async function loadContent() {
   document.getElementById("footerName").textContent = content.site.name;
   document.getElementById("footerDomain").textContent = content.site.domain;
 
+  if (heroIslandLogo && content.site.logoText) {
+    heroIslandLogo.textContent = content.site.logoText;
+  }
+
   document.getElementById("heroEyebrow").textContent = content.hero.eyebrow;
   document.getElementById("heroTitle").textContent = content.hero.title;
   document.getElementById("heroIntro").textContent = content.hero.intro;
 
-  content.hero.cards.forEach((card) => pathGrid.appendChild(createPathCard(card)));
-  content.sections.forEach((section) => scrollSections.appendChild(createSection(section)));
+  content.hero.cards.forEach((card) => {
+    if (heroIslandNav) {
+      heroIslandNav.appendChild(createIslandLink(card));
+    }
+    pathGrid.appendChild(createPathCard(card));
+  });
+
+  content.sections.forEach((section) => {
+    scrollSections.appendChild(createSection(section));
+  });
 
   requestVisibilityUpdate();
 }
 
-loadContent().then(() => {
-  window.addEventListener("scroll", requestVisibilityUpdate, { passive: true });
-  window.addEventListener("resize", requestVisibilityUpdate);
-}).catch((error) => {
-  console.error("Failed to load homepage content:", error);
-});
+loadContent()
+  .then(() => {
+    window.addEventListener("scroll", requestVisibilityUpdate, { passive: true });
+    window.addEventListener("resize", requestVisibilityUpdate);
+  })
+  .catch((error) => {
+    console.error("Failed to load homepage content:", error);
+  });
