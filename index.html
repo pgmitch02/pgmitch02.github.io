@@ -4,15 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Peter Mitchell</title>
-  <meta name="description" content="Peter Mitchell | Infrastructure Network Analyst | Portfolio, homelab, professional work, and IT solutions." />
+  <meta
+    name="description"
+    content="Peter Mitchell | Infrastructure Network Analyst | Portfolio, homelab, professional work, and IT solutions."
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
       <div class="hero-island site-island" id="heroIsland">
-        <div class="hero-island-logo" id="heroIslandLogo" aria-label="Logo placeholder">PM</div>
+        <div class="hero-island-logo-wrap">
+          <div class="hero-island-logo" id="heroIslandLogo" aria-label="Logo placeholder">PM</div>
+          <div class="island-brand">
+            <span class="brand-name" id="brandName">Peter Mitchell</span>
+            <span class="brand-role" id="brandRole">Infrastructure Network Analyst</span>
+          </div>
+        </div>
+
         <nav class="hero-island-nav" id="heroIslandNav" aria-label="Primary navigation"></nav>
+
         <button class="theme-toggle island-theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">
           <span class="theme-icon" id="themeIcon" aria-hidden="true"></span>
           <span id="themeText"></span>
@@ -20,15 +31,11 @@
       </div>
     </div>
   </header>
-  
+
   <main>
     <section class="hero">
       <div class="container">
-        <div class="hero-card"> 
-          <div class="hero-island" id="heroIsland">
-            <div class="hero-island-logo" id="heroIslandLogo" aria-label="Logo placeholder">PM</div>
-            <nav class="hero-island-nav" id="heroIslandNav" aria-label="Hero navigation"></nav>
-          </div>
+        <div class="hero-card">
           <span class="eyebrow" id="heroEyebrow"></span>
           <h1 id="heroTitle"></h1>
           <p id="heroIntro"></p>
