@@ -1,41 +1,42 @@
 :root {
-  --bg: #09111a;
-  --bg-soft: #0surface: rgba(15, 24, 36, 0.8);  --bg-soft: #0d1722;
-  --surface-strong: rgba(18, 30, 44, 0.94);
-  --surface-solid: #111d2b;
-  --text: #e8eef7;
-  --text-soft: #9aaec6;
-  --line: rgba(134, 163, 184, 0.15);
-  --line-strong: rgba(134, 163, 184, 0.22);
+  --bg: #0a0f16;
+  --bg-soft: #0d1621;
+  --surface: rgba(16, 24, 36, 0.82);
+  --surface-strong: rgba(20, 31, 46, 0.94);
+  --surface-solid: #121c29;
+  --text: #e7edf6;
+  --text-soft: #9aabbe;
+  --line: rgba(138, 155, 176, 0.16);
+  --line-strong: rgba(138, 155, 176, 0.24);
   --accent-1: #2563eb;
-  --accent-2: #0ea5e9;
-  --accent-3: #22d3ee;
+  --accent-2: #0f766e;
+  --accent-3: #06b6d4;
   --shadow: 0 28px 64px rgba(0, 0, 0, 0.34);
   --hero-glow-1: rgba(37, 99, 235, 0.14);
-  --hero-glow-2: rgba(14, 165, 233, 0.14);
-  --hero-glow-3: rgba(34, 211, 238, 0.08);
-  --surface-fade: 0.18;
+  --hero-glow-2: rgba(15, 118, 110, 0.12);
+  --hero-glow-3: rgba(6, 182, 212, 0.08);
+  --surface-fade: 0.58;
   --blur: 16px;
 }
 
 html[data-theme="light"] {
-  --bg: #eff5fb;
-  --bg-soft: #e5eef8;
-  --surface: rgba(255, 255, 255, 0.82);
-  --surface-strong: rgba(255, 255, 255, 0.95);
+  --bg: #edf3f9;
+  --bg-soft: #e6edf6;
+  --surface: rgba(255, 255, 255, 0.84);
+  --surface-strong: rgba(255, 255, 255, 0.96);
   --surface-solid: #ffffff;
-  --text: #102033;
-  --text-soft: #60728b;
-  --line: rgba(16, 32, 51, 0.1);
-  --line-strong: rgba(16, 32, 51, 0.16);
+  --text: #12233a;
+  --text-soft: #5f7187;
+  --line: rgba(18, 35, 58, 0.1);
+  --line-strong: rgba(18, 35, 58, 0.16);
   --accent-1: #1d4ed8;
-  --accent-2: #0284c7;
-  --accent-3: #0891b2;
+  --accent-2: #0f766e;
+  --accent-3: #0284c7;
   --shadow: 0 22px 52px rgba(15, 23, 42, 0.1);
   --hero-glow-1: rgba(29, 78, 216, 0.08);
-  --hero-glow-2: rgba(2, 132, 199, 0.08);
-  --hero-glow-3: rgba(8, 145, 178, 0.06);
-  --surface-fade: 0.22;
+  --hero-glow-2: rgba(15, 118, 110, 0.08);
+  --hero-glow-3: rgba(2, 132, 199, 0.06);
+  --surface-fade: 0.62;
   --blur: 18px;
 }
 
@@ -286,7 +287,7 @@ a {
   border-radius: 999px;
   border: 1px solid var(--line);
   background: color-mix(in srgb, var(--surface-strong) 88%, transparent);
-  color: var(--accent-2);
+  color: var(--accent-3);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   font-size: 0.78rem;
@@ -298,8 +299,8 @@ a {
   width: 100%;
   max-width: none;
   font-size: clamp(2.7rem, 5.9vw, 5.4rem);
-  line-height: 1.04;
-  letter-spacing: -0.045em;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
   font-weight: 760;
   text-wrap: balance;
   text-align: left;
@@ -327,7 +328,7 @@ a {
   overflow: hidden;
   min-height: 168px;
   border-radius: 24px;
-  padding: 1.1rem 1.1rem 1.15rem;
+  padding: 1.1rem;
   background: color-mix(in srgb, var(--surface) 82%, transparent);
   border: 1px solid var(--line);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
@@ -376,10 +377,11 @@ a {
   left: 50%;
   top: 50%;
   z-index: 1;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: calc(100% - 2.2rem);
+  min-height: 2.2rem;
   transform: translate(-50%, -50%);
   font-size: clamp(1.2rem, 2.2vw, 1.45rem);
   font-weight: 720;
@@ -391,15 +393,16 @@ a {
 .path-desc {
   position: absolute;
   left: 50%;
-  top: 58%;
-  width: calc(100% - 2.2rem);
+  top: 62%;
+  width: calc(100% - 2.4rem);
+  max-width: 24ch;
   z-index: 1;
   margin: 0;
   font-size: 0.98rem;
   line-height: 1.68;
   color: var(--text-soft);
   opacity: 0;
-  transform: translate(-50%, -38%);
+  transform: translate(-50%, -42%);
   transition: opacity 0.22s ease, transform 0.22s ease;
   pointer-events: none;
   text-align: center;
@@ -407,7 +410,7 @@ a {
 
 .path-card:hover .path-card-title,
 .path-card:focus-visible .path-card-title {
-  top: 1.2rem;
+  top: 1.15rem;
   transform: translate(-50%, 0);
   font-size: clamp(1.15rem, 2vw, 1.35rem);
 }
@@ -431,7 +434,7 @@ a {
   display: flex;
   align-items: center;
   opacity: var(--surface-fade);
-  transform: translateY(22px) scale(0.982);
+  transform: translateY(16px);
   transition: opacity 0.16s linear, transform 0.16s linear;
   will-change: opacity, transform;
 }
@@ -459,8 +462,8 @@ a {
   width: 100%;
   max-width: none;
   font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: 1.06;
-  letter-spacing: -0.04em;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
   text-wrap: balance;
 }
 
@@ -637,6 +640,7 @@ a {
   }
 
   .path-desc {
+    max-width: 26ch;
     font-size: 0.94rem;
   }
 
