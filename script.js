@@ -153,11 +153,6 @@ async function loadContent() {
   document.getElementById("brandRole").textContent = content.site.role;
   document.getElementById("footerName").textContent = content.site.name;
   document.getElementById("footerDomain").textContent = content.site.domain;
-
-  if (heroIslandLogo && content.site.logoText) {
-    heroIslandLogo.textContent = content.site.logoText;
-  }
-
   document.getElementById("heroEyebrow").textContent = content.hero.eyebrow;
   document.getElementById("heroTitle").textContent = content.hero.title;
   document.getElementById("heroIntro").textContent = content.hero.intro;
