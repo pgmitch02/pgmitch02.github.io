@@ -225,7 +225,7 @@ a {
 .path-card {
   position: relative;
   overflow: hidden;
-  min-height: 122px;
+  min-height: 150px;
   border-radius: 24px;
   padding: 1.1rem 1.1rem 1.15rem;
   background: color-mix(in srgb, var(--surface) 82%, transparent);
@@ -235,7 +235,8 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 0.55rem;
+  z-index: 1;
+  transform-origin: center center;
 }
 
 .path-card::before {
@@ -244,24 +245,37 @@ a {
   inset: 0;
   opacity: 0;
   transition: opacity 0.22s ease;
-  background: linear-gradient(135deg,
+  background: linear-gradient(
+    135deg,
     color-mix(in srgb, var(--accent-1) 22%, transparent),
     color-mix(in srgb, var(--accent-2) 26%, transparent) 58%,
-    color-mix(in srgb, var(--accent-3) 18%, transparent));
+    color-mix(in srgb, var(--accent-3) 18%, transparent)
+  );
   pointer-events: none;
 }
 
 .path-card:hover,
 .path-card:focus-visible {
-  transform: translateY(-4px) scale(1.025);
+  transform: translateY(-4px) scale(1.045);
   border-color: transparent;
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.16), 0 0 0 1px color-mix(in srgb, var(--accent-2) 24%, transparent);
+  box-shadow:
+    0 18px 34px rgba(0, 0, 0, 0.18),
+    0 0 0 1px color-mix(in srgb, var(--accent-2) 24%, transparent);
   background: color-mix(in srgb, var(--surface-strong) 96%, transparent);
+  z-index: 3;
 }
 
 .path-card:hover::before,
 .path-card:focus-visible::before {
   opacity: 1;
+}
+
+.path-grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
 }
 
 .path-card-title {
@@ -276,26 +290,25 @@ a {
 }
 
 .path-desc {
-  position: relative;
+  position: absolute;
+  left: 1.1rem;
+  right: 1.1rem;
+  bottom: 1rem;
   z-index: 1;
   margin: 0;
-  width: 100%;
-  max-width: none;
   font-size: 0.98rem;
   line-height: 1.68;
   color: var(--text-soft);
   opacity: 0;
   transform: translateY(10px);
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.22s ease, transform 0.22s ease, max-height 0.22s ease;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+  pointer-events: none;
 }
 
 .path-card:hover .path-desc,
 .path-card:focus-visible .path-desc {
   opacity: 1;
   transform: translateY(0);
-  max-height: 84px;
 }
 
 .path-card:focus-visible {
@@ -452,9 +465,9 @@ a {
     font-size: 1rem;
   }
 
-  .path-card {
-    min-height: 112px;
-  }
+.path-card {
+  min-height: 140px;
+}
 
   .footer-inner {
     flex-direction: column;
