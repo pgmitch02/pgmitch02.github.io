@@ -6,12 +6,13 @@
   "site": {
     "name": "Peter Mitchell",
     "role": "Infrastructure Network Analyst",
-    "domain": "peter-mitchell.pgmitch.cc"
+    "domain": "peter-mitchell.pgmitch.cc",
+    "logoText": "PM"
   },
   "hero": {
-    "eyebrow": "Infrastructure \u2022 Networking \u2022 Systems",
+    "eyebrow": "Infrastructure • Networking • Systems",
     "title": "Building reliable systems with a practical, documentation-first mindset.",
-    "intro": "I\u2019m Peter Mitchell, an Infrastructure Network Analyst focused on enterprise networking, systems documentation, automation, and operational clarity. This site exists to document my homelab, showcase professional work, and present IT solutions for future consulting in a way that reflects both technical depth and operational maturity.",
+    "intro": "I’m Peter Mitchell, an Infrastructure Network Analyst focused on enterprise networking, systems documentation, automation, and operational clarity. This site exists to document my homelab, showcase professional work, and present IT solutions for future consulting in a way that reflects both technical depth and operational maturity.",
     "cards": [
       {
         "title": "Homelab",
@@ -34,7 +35,7 @@
     {
       "label": "Purpose",
       "title": "A portfolio and documentation hub, not just a landing page.",
-      "body": "The goal of this site is to make technical work visible in a useful way. Instead of reducing experience to a short r\u00e9sum\u00e9 summary, it creates room for deeper context, real projects, better documentation, and the thinking behind the systems themselves.",
+      "body": "The goal of this site is to make technical work visible in a useful way. Instead of reducing experience to a short résumé summary, it creates room for deeper context, real projects, better documentation, and the thinking behind the systems themselves.",
       "quote": "It is meant to show not only what I have worked on, but how I approach infrastructure, improvement, documentation, and long-term technical growth."
     },
     {
