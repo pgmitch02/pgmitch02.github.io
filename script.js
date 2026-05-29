@@ -184,3 +184,4 @@ loadContent()
   .catch((error) => {
     console.error("Failed to load homepage content:", error);
   });
+``
