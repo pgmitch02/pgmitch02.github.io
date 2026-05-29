@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "title": "Peter Mitchell",
+    "description": "Peter Mitchell | Infrastructure Network Analyst | Portfolio, homelab, professional work, and IT solutions."
+  },
+  "site": {
+    "name": "Peter Mitchell",
+    "role": "Infrastructure Network Analyst",
+    "domain": "peter-mitchell.pgmitch.cc"
+  },
+  "hero": {
+    "eyebrow": "Infrastructure \u2022 Networking \u2022 Systems",
+    "title": "Building reliable systems with a practical, documentation-first mindset.",
+    "intro": "I\u2019m Peter Mitchell, an Infrastructure Network Analyst focused on enterprise networking, systems documentation, automation, and operational clarity. This site exists to document my homelab, showcase professional work, and present IT solutions for future consulting in a way that reflects both technical depth and operational maturity.",
+    "cards": [
+      {
+        "title": "Homelab",
+        "description": "Architecture, services, experiments, and lessons learned.",
+        "href": "homelab.html"
+      },
+      {
+        "title": "Professional",
+        "description": "Projects, milestones, growth, and infrastructure work.",
+        "href": "professional.html"
+      },
+      {
+        "title": "Solutions",
+        "description": "Future private and small business IT offerings.",
+        "href": "solutions.html"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "label": "Purpose",
+      "title": "A portfolio and documentation hub, not just a landing page.",
+      "body": "The goal of this site is to make technical work visible in a useful way. Instead of reducing experience to a short r\u00e9sum\u00e9 summary, it creates room for deeper context, real projects, better documentation, and the thinking behind the systems themselves.",
+      "quote": "It is meant to show not only what I have worked on, but how I approach infrastructure, improvement, documentation, and long-term technical growth."
+    },
+    {
+      "label": "Approach",
+      "title": "Clean systems, clear documentation, and thoughtful execution.",
+      "body": "The work I want to represent here is grounded in reliability, traceability, and the ability to make technical environments easier to understand over time. Good systems should not only work well. Good systems should also be maintainable, teachable, and well documented.",
+      "principles": [
+        {
+          "title": "Operational clarity",
+          "body": "Reducing ambiguity in how systems are built, maintained, and communicated."
+        },
+        {
+          "title": "Documentation first",
+          "body": "Designing with the assumption that future understanding matters as much as present function."
+        },
+        {
+          "title": "Practical growth",
+          "body": "Building experience through real projects, steady refinement, and visible progress over time."
+        }
+      ]
+    },
+    {
+      "label": "Direction",
+      "title": "Built to expand as the work behind it grows.",
+      "body": "This homepage is intentionally simple. The depth lives in the pages behind it. As the site develops, each destination will become a more complete record of systems, projects, architecture decisions, accomplishments, and future direction without overwhelming the first impression.",
+      "quote": "The purpose is not to show everything at once. The purpose is to guide people toward the right place and let the deeper material speak for itself."
+    }
+  ]
+}
